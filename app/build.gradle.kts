@@ -1,5 +1,4 @@
-// Since AGP 9 Kotlin support is built into the Android plugin,
-// so "org.jetbrains.kotlin.android" must not be applied here.
+// AGP 9 already includes Kotlin, don't add the kotlin.android plugin
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)

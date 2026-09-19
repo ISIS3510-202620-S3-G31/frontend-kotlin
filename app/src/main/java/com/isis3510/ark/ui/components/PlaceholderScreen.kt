@@ -15,8 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.isis3510.ark.ui.theme.ArkTextMuted
 
-// Temporary body for the screens that are not implemented yet.
-// The owner of each view replaces the call to this composable with the real screen.
+// placeholder for the views that are not done yet
 @Composable
 fun PlaceholderScreen(
     title: String,

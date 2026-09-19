@@ -20,8 +20,7 @@ import com.isis3510.ark.ui.screens.stats.StatsScreen
 import com.isis3510.ark.ui.screens.tearcollection.TearCollectionScreen
 import com.isis3510.ark.ui.screens.toolhub.ToolHubScreen
 
-// Single navigation graph of the app. Each screen lives in its own package under
-// ui/screens, so to work on a view you only need to touch the files of that package.
+// one package per view in ui/screens
 @Composable
 fun ArkNavHost(
     modifier: Modifier = Modifier,

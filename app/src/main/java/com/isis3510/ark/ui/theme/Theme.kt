@@ -24,8 +24,7 @@ private val ArkColorScheme = lightColorScheme(
     outline = ArkText.copy(alpha = 0.2f),
 )
 
-// The palette is the same in light and dark mode on purpose: the warm cream background
-// is part of the brand (MS6, section 2.2), so there is no dark colour scheme.
+// same palette in light and dark mode (MS6)
 @Composable
 fun ArkTheme(content: @Composable () -> Unit) {
     MaterialTheme(

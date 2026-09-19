@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ArkTheme {
-                // The Surface sets the background and makes the text colour of the theme the default one.
+                // Surface so the text uses the theme color
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     ArkNavHost()
                 }
