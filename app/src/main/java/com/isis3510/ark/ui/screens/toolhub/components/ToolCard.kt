@@ -45,7 +45,6 @@ fun ToolCard(tool: ToolItem, onClick: () -> Unit, modifier: Modifier = Modifier)
                 .background(MaterialTheme.colorScheme.secondary, MaterialTheme.shapes.medium),
             contentAlignment = Alignment.Center,
         ) {
-            // 34 dp is the icon size for tool cards (MS6, section 4.4).
             Image(
                 painter = painterResource(tool.icon),
                 contentDescription = null,

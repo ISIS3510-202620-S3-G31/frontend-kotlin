@@ -38,7 +38,7 @@ private data class BottomTab(
     @DrawableRes val icon: Int,
 )
 
-// The three level 1 sections (MS6, section 7.3). No more than 3 tabs.
+// max 3 tabs
 private val bottomTabs = listOf(
     BottomTab(ArkDestination.ToolHub, R.string.tab_tools, R.drawable.ic_tools),
     BottomTab(ArkDestination.Random, R.string.tab_random, R.drawable.ic_random),
@@ -79,8 +79,7 @@ fun ArkBottomBar(
                     verticalArrangement = Arrangement.spacedBy(4.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
-                    // The active tab is marked with the teal pill and the full colour label,
-                    // so the state does not depend only on colour.
+                    // active tab: pill + label
                     Box(
                         modifier = Modifier
                             .size(width = 64.dp, height = 32.dp)

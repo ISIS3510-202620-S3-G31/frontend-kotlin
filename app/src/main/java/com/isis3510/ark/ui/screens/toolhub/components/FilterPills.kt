@@ -51,7 +51,7 @@ fun FilterPills(
 
 @Composable
 private fun FilterPill(label: String, selected: Boolean, onClick: () -> Unit) {
-    // The pill is 36 dp tall but the touch area around it is 48 dp.
+    // 36dp pill, 48dp touch area
     Box(
         modifier = Modifier
             .heightIn(min = 48.dp)
@@ -72,7 +72,7 @@ private fun FilterPill(label: String, selected: Boolean, onClick: () -> Unit) {
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            // The check makes the selected pill different by shape too, not only by colour.
+            // check so it's not only color
             if (selected) {
                 Image(
                     painter = painterResource(R.drawable.ic_check),

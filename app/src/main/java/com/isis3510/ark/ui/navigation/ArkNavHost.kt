@@ -31,8 +31,7 @@ fun ArkNavHost(
     val onOpen: (ArkDestination) -> Unit = { destination ->
         navController.navigate(destination.route) { launchSingleTop = true }
     }
-    // Moving between bottom tabs does not pile up screens: the back stack always
-    // goes back to the tool hub, and each tab keeps its state.
+    // tabs don't pile up on the back stack
     val onTabSelected: (ArkDestination) -> Unit = { destination ->
         navController.navigate(destination.route) {
             popUpTo(navController.graph.findStartDestination().id) { saveState = true }

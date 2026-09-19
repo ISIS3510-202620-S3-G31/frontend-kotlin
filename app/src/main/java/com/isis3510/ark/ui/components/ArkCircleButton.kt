@@ -18,8 +18,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-// Round button with an icon in the middle. It is the secondary button of the app
-// (back, profile, reset, finish). The default size is the 48 dp minimum touch target.
+// 48dp = min touch target
 @Composable
 fun ArkCircleButton(
     @DrawableRes icon: Int,

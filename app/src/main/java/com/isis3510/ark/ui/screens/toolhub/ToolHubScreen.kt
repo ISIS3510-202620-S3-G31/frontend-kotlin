@@ -33,14 +33,12 @@ import com.isis3510.ark.ui.screens.toolhub.components.ToolCard
 import com.isis3510.ark.ui.theme.ArkTextMuted
 import com.isis3510.ark.ui.theme.ArkTheme
 
-// Home of the app (level 1). It has no back button and it is one of the three
-// screens that show the bottom tab bar.
 @Composable
 fun ToolHubScreen(
     onOpen: (ArkDestination) -> Unit,
     onTabSelected: (ArkDestination) -> Unit,
 ) {
-    // Only the view for now: the selected filter lives here until the ViewModel exists.
+    // TODO: move to the ViewModel
     var selectedFilter by rememberSaveable { mutableStateOf(ToolFilter.All) }
 
     ToolHubContent(

@@ -20,8 +20,7 @@ data class ToolItem(
     val filter: ToolFilter,
 )
 
-// Everything the tool hub needs to draw itself. For now it is built with fixed data;
-// when the ViewModel exists it will expose this same class.
+// fixed data for now
 data class ToolHubUiState(
     val selectedFilter: ToolFilter = ToolFilter.All,
     val tools: List<ToolItem> = allTools,

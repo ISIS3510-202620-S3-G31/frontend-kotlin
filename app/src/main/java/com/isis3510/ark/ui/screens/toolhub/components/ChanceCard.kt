@@ -30,8 +30,6 @@ import androidx.compose.ui.unit.dp
 import com.isis3510.ark.R
 import com.isis3510.ark.ui.theme.ArkOnDarkMuted
 
-// First and most visible card of the hub: a shortcut to the random tool picker.
-// Bloom uses the Curious pose, the one MS6 (section 5.5) assigns to "Leave it to chance".
 @Composable
 fun ChanceCard(onSurpriseMe: () -> Unit, modifier: Modifier = Modifier) {
     val shape = MaterialTheme.shapes.extraLarge
@@ -66,8 +64,7 @@ fun ChanceCard(onSurpriseMe: () -> Unit, modifier: Modifier = Modifier) {
             SurpriseMeButton(onClick = onSurpriseMe)
         }
 
-        // Decoration, anchored to the right so it also works on wider screens.
-        // Bloom goes a bit outside the card on purpose and the card clips it.
+        // Bloom + sparkle, the card clips Bloom on purpose
         Image(
             painter = painterResource(R.drawable.question_sparkle),
             contentDescription = null,
