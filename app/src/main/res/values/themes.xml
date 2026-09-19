@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Window theme only. The real look of the app lives in ui/theme (Compose). -->
+    <!-- only the window, the real theme is in ui/theme -->
     <style name="Theme.Ark" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowBackground">@color/ark_background</item>
     </style>
