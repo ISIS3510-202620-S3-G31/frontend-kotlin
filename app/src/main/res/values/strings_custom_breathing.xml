@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="breathing_title">Custom breathing</string>
+    <string name="breathing_subtitle">Build your own rhythm</string>
+    <string name="breathing_back">Back to the toolbox</string>
+
+    <string name="breathing_pattern_two_step">2-step</string>
+    <string name="breathing_pattern_three_step">3-step</string>
+    <string name="breathing_pattern_four_seven_eight">4-7-8</string>
+
+    <string name="breathing_status_running">Running</string>
+    <string name="breathing_status_paused">Paused</string>
+    <string name="breathing_phase_inhale">Breathe in</string>
+    <string name="breathing_phase_hold">Hold</string>
+    <string name="breathing_phase_exhale">Breathe out</string>
+    <string name="breathing_cycle">Cycle %1$d of %2$d</string>
+
+    <string name="breathing_step_inhale">Inhale</string>
+    <string name="breathing_step_hold">Hold</string>
+    <string name="breathing_step_exhale">Exhale</string>
+    <string name="breathing_seconds">%1$ds</string>
+    <string name="breathing_decrease">Decrease %1$s</string>
+    <string name="breathing_increase">Increase %1$s</string>
+
+    <string name="breathing_minutes">%1$d min</string>
+
+    <string name="breathing_reset">Reset the session</string>
+    <string name="breathing_pause">Pause the session</string>
+    <string name="breathing_finish">Finish the session</string>
+</resources>
