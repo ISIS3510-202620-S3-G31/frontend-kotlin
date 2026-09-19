@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bottom tab bar -->
+    <string name="tab_tools">Tools</string>
+    <string name="tab_random">Random</string>
+    <string name="tab_stats">Stats</string>
+
+    <!-- Tool hub -->
+    <string name="tool_hub_title">Your toolbox</string>
+    <string name="tool_hub_subtitle">Pick a tool — or let chance pick for you.</string>
+    <string name="tool_hub_profile">Open profile</string>
+    <string name="tool_hub_all_tools">All tools</string>
+
+    <string name="tool_filter_all">All</string>
+    <string name="tool_filter_calm_down">Calm down</string>
+    <string name="tool_filter_release">Release</string>
+    <string name="tool_filter_reflect">Reflect</string>
+    <string name="tool_filter_celebrate">Celebrate</string>
+
+    <string name="chance_card_title">Leave it to chance</string>
+    <string name="chance_card_body">Not sure what you need right now? We\'ll pick one tool for you.</string>
+    <string name="chance_card_button">Surprise me</string>
+
+    <string name="tool_blow_it_out_description">Blow out the tension, one breath at a time.</string>
+    <string name="tool_photo_of_the_day_description">One photo a day, one new memory.</string>
+    <string name="tool_custom_breathing_description">Build the rhythm that fits you.</string>
+    <string name="tool_achievement_jar_description">Save the good stuff. Read it when you need it.</string>
+    <string name="tool_body_mapping_description">Mark where the feeling lives.</string>
+    <string name="tool_scream_tank_description">Let it out. Nobody is listening but you.</string>
+    <string name="tool_containment_section_description">A safe place to put it down for now.</string>
+    <string name="tool_tear_collection_description">Some days deserve to be counted.</string>
+    <string name="tool_emotion_detective_description">Not sure what you feel? Let\'s find out.</string>
+</resources>
