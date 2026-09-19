@@ -25,8 +25,6 @@ import com.isis3510.ark.R
 import com.isis3510.ark.ui.screens.custombreathing.CustomBreathingUiState
 import com.isis3510.ark.ui.theme.ArkOnDarkMuted
 
-// Dark card with the state of the session. Bloom uses the Mindful pose,
-// the one MS6 (section 5.5) assigns to the breathing exercises.
 @Composable
 fun TimerCard(state: CustomBreathingUiState, modifier: Modifier = Modifier) {
     val onDark = MaterialTheme.colorScheme.inverseOnSurface
@@ -49,8 +47,7 @@ fun TimerCard(state: CustomBreathingUiState, modifier: Modifier = Modifier) {
                     verticalArrangement = Arrangement.spacedBy(2.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
-                    // The countdown is the only text bigger than H1. It stays in Figtree
-                    // because Sorean is only for titles.
+                    // Figtree, Sorean is only for titles
                     Text(
                         text = state.secondsLeft.toString(),
                         style = MaterialTheme.typography.titleLarge.copy(fontSize = 64.sp, lineHeight = 64.sp),
@@ -96,7 +93,6 @@ private fun StatusChip(isRunning: Boolean, modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        // The dot is teal while running and dimmed while paused, and the label changes too.
         Box(
             modifier = Modifier
                 .size(8.dp)

@@ -24,11 +24,9 @@ import kotlin.math.sin
 
 private const val START_ANGLE = -90f
 
-// In the mockup the sparkles are drawn for a ring at 40%, so they are rotated from there.
+// sparkles are drawn for 40% in the mockup
 private const val SPARKLES_PROGRESS = 0.4f
 
-// Circular timer: a dim track, an arc that goes from teal to orange, a soft glow
-// and some sparkles at the head of the arc. The content goes in the middle.
 @Composable
 fun BreathingRing(
     progress: Float,
@@ -50,7 +48,7 @@ fun BreathingRing(
                 y = center.y + radius * sin(angle).toFloat(),
             )
 
-            // Glow behind the head of the arc
+            // glow
             val glowRadius = 25.dp.toPx()
             drawCircle(
                 brush = Brush.radialGradient(
@@ -64,8 +62,7 @@ fun BreathingRing(
 
             drawCircle(color = trackColor, radius = radius, style = Stroke(width = stroke))
 
-            // The gradient goes from the top of the ring to the head of the arc.
-            // After half a turn the head goes up again, so the bottom of the ring is used.
+            // gradient: top of the ring -> head of the arc
             val gradientEnd = if (sweep < 180f) head.y else center.y + radius
             drawArc(
                 brush = Brush.verticalGradient(

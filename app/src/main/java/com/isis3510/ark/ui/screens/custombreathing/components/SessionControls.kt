@@ -22,8 +22,6 @@ import androidx.compose.ui.unit.dp
 import com.isis3510.ark.R
 import com.isis3510.ark.ui.components.ArkCircleButton
 
-// Bottom row that all the tools share: small teal button, big orange button with
-// a dark ring, small teal button.
 @Composable
 fun SessionControls(
     onReset: () -> Unit,

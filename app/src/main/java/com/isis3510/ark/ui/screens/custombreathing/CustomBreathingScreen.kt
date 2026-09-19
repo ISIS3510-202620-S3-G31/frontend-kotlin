@@ -35,11 +35,9 @@ import com.isis3510.ark.ui.theme.ArkTheme
 
 private val secondsRange = 1..15
 
-// Tool screen (level 2), shown mid-session like in the mockup.
 @Composable
 fun CustomBreathingScreen(onBack: () -> Unit) {
-    // Only the view for now: the settings change on screen but there is no countdown yet.
-    // This state moves to the ViewModel when the logic is implemented.
+    // TODO: move to the ViewModel, no countdown yet
     var state by remember { mutableStateOf(CustomBreathingUiState()) }
 
     CustomBreathingContent(
@@ -86,7 +84,7 @@ private fun CustomBreathingContent(
     ) {
         Header(onBack = onBack)
 
-        // Everything between the header and the bottom buttons scrolls on small screens.
+        // scrolls on small screens
         Column(
             modifier = Modifier
                 .weight(1f)
@@ -125,7 +123,6 @@ private fun CustomBreathingContent(
     }
 }
 
-// Same header as the other tools: back button at the top left, title and one line under it.
 @Composable
 private fun Header(onBack: () -> Unit) {
     Row(

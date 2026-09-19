@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.dp
 import com.isis3510.ark.R
 import com.isis3510.ark.ui.components.ArkCircleButton
 
-// Label on the left and "minus, value, plus" on the right.
 @Composable
 fun StepperRow(
     label: String,
@@ -54,7 +53,7 @@ fun StepperRow(
     }
 }
 
-// The circle is 40 dp but it sits in a 48 dp box, so the touch target is still 48 x 48.
+// 40dp circle in a 48dp box
 @Composable
 private fun StepButton(icon: Int, contentDescription: String, onClick: () -> Unit) {
     Box(modifier = Modifier.size(48.dp), contentAlignment = Alignment.Center) {

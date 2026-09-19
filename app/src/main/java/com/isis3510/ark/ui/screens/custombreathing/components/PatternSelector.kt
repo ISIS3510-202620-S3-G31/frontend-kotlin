@@ -23,8 +23,6 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import com.isis3510.ark.ui.screens.custombreathing.BreathingPattern
 
-// Three pills with the same width. Each option has an icon and a label,
-// so the selected one is not recognised only by its colour.
 @Composable
 fun PatternSelector(
     selected: BreathingPattern,

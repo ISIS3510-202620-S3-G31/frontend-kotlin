@@ -37,7 +37,7 @@ fun DurationPills(
     ) {
         sessionDurations.forEach { minutes ->
             val isSelected = minutes == selectedMinutes
-            // The pill is 40 dp tall inside a 48 dp touch area.
+            // 40dp pill, 48dp touch area
             Box(
                 modifier = Modifier
                     .heightIn(min = 48.dp)

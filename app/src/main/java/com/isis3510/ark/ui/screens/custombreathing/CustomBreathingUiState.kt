@@ -24,9 +24,7 @@ enum class BreathingStep(@StringRes val label: Int) {
 
 val sessionDurations = listOf(2, 5, 10)
 
-// Everything the screen needs to draw itself. The default values are the mid-session
-// moment of the mockup. When the ViewModel exists it will expose this same class
-// and the countdown will update secondsLeft, phase, cycle and progress.
+// default values = the mockup (mid session)
 data class CustomBreathingUiState(
     val pattern: BreathingPattern = BreathingPattern.ThreeStep,
     val inhaleSeconds: Int = 4,
