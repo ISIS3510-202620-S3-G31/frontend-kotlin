@@ -1,5 +1,6 @@
 ﻿package com.isis3510.ark.ui.screens.emotiondetective
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -16,15 +17,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.isis3510.ark.R
 import com.isis3510.ark.ui.theme.*
 
-// Sand clay card surface for soft neumorphism
-val ArkCardSurface = Color(0xFFFDF3E0)
+private val ArkCardSurface = Color(0xFFFDF3E0)
 
 @Composable
 fun EmotionDetectiveScreen(
@@ -113,23 +115,17 @@ private fun DetectiveIntroContent(
             textAlign = TextAlign.Center
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
-        // Mascot Badge
-        Box(
+        // Official Mascot Illustration (detective.png)
+        Image(
+            painter = painterResource(id = R.drawable.detective),
+            contentDescription = "Sprout Detective",
             modifier = Modifier
-                .size(160.dp)
-                .shadow(6.dp, RoundedCornerShape(28.dp))
-                .background(ArkCardSurface, RoundedCornerShape(28.dp)),
-            contentAlignment = Alignment.Center
-        ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(text = "🌱", fontSize = 28.sp)
-                Text(text = "🕵️", fontSize = 54.sp)
-            }
-        }
+                .size(170.dp)
+        )
 
-        Spacer(modifier = Modifier.height(28.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         // Welcome Card
         Card(
@@ -150,7 +146,7 @@ private fun DetectiveIntroContent(
             }
         }
 
-        Spacer(modifier = Modifier.height(36.dp))
+        Spacer(modifier = Modifier.height(32.dp))
 
         // Start CTA Button
         Button(
@@ -414,7 +410,7 @@ private fun DetectiveSummaryContent(
             )
         }
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(18.dp))
 
         // Case Solved heading
         Text(
@@ -428,18 +424,15 @@ private fun DetectiveSummaryContent(
 
         Spacer(modifier = Modifier.height(14.dp))
 
-        // Mascot mini badge
-        Box(
+        // Mascot Illustration (detective.png)
+        Image(
+            painter = painterResource(id = R.drawable.detective),
+            contentDescription = "Sprout Detective",
             modifier = Modifier
-                .size(80.dp)
-                .shadow(4.dp, RoundedCornerShape(20.dp))
-                .background(ArkCardSurface, RoundedCornerShape(20.dp)),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(text = "🕵️", fontSize = 42.sp)
-        }
+                .size(90.dp)
+        )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(18.dp))
 
         // Summary Card
         Card(
@@ -513,7 +506,7 @@ private fun DetectiveSummaryContent(
             }
         }
 
-        Spacer(modifier = Modifier.height(28.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         // Primary Button
         Button(
@@ -538,7 +531,7 @@ private fun DetectiveSummaryContent(
             )
         }
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
         // Secondary Text Button
         TextButton(
@@ -554,6 +547,6 @@ private fun DetectiveSummaryContent(
             )
         }
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(28.dp))
     }
 }
