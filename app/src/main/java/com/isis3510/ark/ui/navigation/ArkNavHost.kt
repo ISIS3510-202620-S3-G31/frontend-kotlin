@@ -2,6 +2,7 @@ package com.isis3510.ark.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -30,15 +31,23 @@ fun ArkNavHost(
     val onOpen: (ArkDestination) -> Unit = { destination ->
         navController.navigate(destination.route) { launchSingleTop = true }
     }
+    // tabs don't pile up on the back stack
+    val onTabSelected: (ArkDestination) -> Unit = { destination ->
+        navController.navigate(destination.route) {
+            popUpTo(navController.graph.findStartDestination().id) { saveState = true }
+            launchSingleTop = true
+            restoreState = true
+        }
+    }
 
     NavHost(
         navController = navController,
         startDestination = ArkDestination.ToolHub.route,
         modifier = modifier,
     ) {
-        composable(ArkDestination.ToolHub.route) { ToolHubScreen(onOpen = onOpen) }
-        composable(ArkDestination.Random.route) { RandomScreen(onOpen = onOpen) }
-        composable(ArkDestination.Stats.route) { StatsScreen(onOpen = onOpen) }
+        composable(ArkDestination.ToolHub.route) { ToolHubScreen(onOpen = onOpen, onTabSelected = onTabSelected) }
+        composable(ArkDestination.Random.route) { RandomScreen(onOpen = onOpen, onTabSelected = onTabSelected) }
+        composable(ArkDestination.Stats.route) { StatsScreen(onOpen = onOpen, onTabSelected = onTabSelected) }
 
         composable(ArkDestination.BlowItOut.route) { BlowItOutScreen(onBack = onBack) }
         composable(ArkDestination.PhotoOfTheDay.route) { PhotoOfTheDayScreen(onBack = onBack) }
